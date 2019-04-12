@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# chen - output the honking 2hu cat youkai
+#
+
+hair=$(tput setaf 3)
+ears=$(tput setaf 0)
+eyes=$(tput setaf 1)
+neck=$(tput setaf 1)
+mouth=$(tput setaf 0)
+hat=$(tput setaf 2)
+reset=$(tput sgr0)
+
+echo "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     ${hat} ⣀⣀⣀⣀⣀⣀⣀⡀${reset}
+⠀⠀⠀⠀⠀${ears}⠀⣀⣀⡀${reset}⠀⠀⠀${hat}⢀⡠⠔⠒⠉⠁⠀⠀⠀⠀⠀⠀⠀⡇${reset}${ears}⢀⣠⣴⣾⠟⢱${reset}
+⠀⠀⠀⠀${ears}⠀⡌⠈⠻⣿⣿⣦⣆⠁${reset}⠀⠀⠀⠀⠀⠀⠀⠀${ears}⢀⡀⠤⢤⣽⣿⣿⣟⠡⢤⡘${reset}
+⠀⠀⠀⠀${ears}⢰⠠⣒⠉⠙⢿⣿⡿⠷${reset}${hair}⣀⣠⠴⢤⣀${reset}⠀⠀${ears}⠈⠁⡀⡴⠿⢿⣿⠋⠀⣔⠁⠇${reset}
+⠀${hat}⢀⡠⠔${reset}${ears}⡎⠀⢠⣃⣠⠞⠁${reset}⠀⠀⠀⠀⠀${hair}⡄⠀⠉⠑⠒⡉⠈${reset}⠀⠀⠀${ears}⠈⠑⠶⡭⠼⡄${reset}
+${hat}⢠⠃${reset}⠀⠀${ears}⠇⠀⢀⠞⠁${reset}⠀${hair}⢠⠀⢠⠚⠉⡹⢳⠀⠀⠀⠀⡷⡏⠉⠙⢢⡀${reset}⠀⠀${ears}⠘⢟⠁${reset}
+${hat}⢸${reset}⠀⠀⠀${ears}⢸⢠⠃${reset}⠀⠀${hair}⠀⡎⠀⠀⠀⣼⣁⠘⡀⠀⠀⠀⡇⡈⢢⣀⡀⠁⠀⠀⠀⠈⢆${reset}
+${hat}⡜${reset}⠀⠀⠀${ears}⢀⠇${reset}⠀⠀⠀${hair}⢸⠀⢀⡴⠋⢉⠉⠳⣵⡀⠀⠀⣯⠞⢉⡉⠹⣆⠀⠀⠀⠀⠘⡆${reset}
+${hat}⠈⠐⡎⠑⠟${reset}⠀⠀⠀⠀${hair}⡏⠀⡊${reset}⠀⠀${eyes}⠀⣵⡀${reset}${hair}⠉⠑⣄${reset}⠀${eyes}⠃⠀⠀⢈⣦${reset}${hair}⠹⡀⠀⢰⢦⡀⡇${reset}
+⠀${hair}⢰⠀⠀⡀⠀⠀⠀⠀⡇${reset}${eyes}⢠⣧⣤⣤⣾⣿⣷⠀⠀⠀⠁⣦⣤⣴⣾⣿⡆${reset}${hair}⡇⠀⢸⠀⠙⠇${reset}
+⠀${hair}⢸⣦⣀⡇⠀⠀⠀⠀⡇${reset}${eyes}⢸⣿⣿⣿⣿⡿⣿⠀⠀⠀⠀⣿⣿⣿⣿⣿⡇${reset}${hair}⡇⠀⢸${reset}
+⠀${hair}⢸⣿⣿⣧⠀⠀⠀⠀⡇${reset}${eyes}⠈⠳⠈⠛⠋⠐⠃${reset}⠀⠀${mouth}⠤${reset} ${eyes}⠛⠈⠛⠉⠜${reset}⠀${hair}⢇⡀⡼${reset}
+⠀⠀${hair}⢿⣿⣿⣆⠀⠀⠀⢸${reset}⠀⠀⠀⠀⠀⠀${mouth}⢆⣀⠤⣀⡠${reset}⠀⠀⠀⠀⠀⠀${hair}⢀⣵⠃${reset}
+⠀⠀${hair}⠈⠻⣿⠿⢷⣄⠀⠀⢧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⢀⣠⠔⣫⠃${reset}
+⠀⠀⠀⠀⠀⠀⠀⠀${neck}⣱⣦⣈${reset}   ${hair}⡛⠒⢴⠉⠉⠑⢤⠤${reset}${neck}⡖⠊⢁⡿⠟⣏⡴⠁${reset}
+⠀⠀⠀⠀⠀⠀⠀${neck}⣴⣿⣿⡿⠈⠉⠀⠘⡄⠀⠀⢠⣠⠁⢀⠎${reset}
+⠀⠀⠀⠀⠀${neck}⢀⣾⣿⣿⣿⠃⠀⠀⠀⠀⣷⣠⣶⣿⠗⠔⠋${reset}
+⠀⠀⠀⠀⠀${neck}⠘⠛⠛⠛⠃⠀⠀⠀⠀⠀⠛⠛⠛${reset}
+"

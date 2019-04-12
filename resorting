@@ -1,0 +1,28 @@
+#! /bin/bash
+
+
+startnum=1
+finishnum=663
+sourcepath=/home/bfg/I/test/lt128kmt64kjpg/
+destpath=/home/bfg/I/1_w/lt128kmt64kjpg/
+
+let finishnum=$finishnum+1
+mkdir -p $destpath
+until [ $finishnum -eq $startnum ]
+do
+	cd $sourcepath/$startnum
+	Z=$(ls | wc -l)
+	until [ $Z -eq 0 ]
+	do
+		for x in $(find -type f)
+		do
+			mv --no-clobber $x $destpath
+		done
+
+	Z=$(ls | wc -l)
+	done
+
+let startnum=$startnum+1
+done
+
+exit 0

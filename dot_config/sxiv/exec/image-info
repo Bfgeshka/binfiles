@@ -1,0 +1,10 @@
+#!/bin/sh
+
+filename=$(basename "$1")
+# filetype=$(printf '%s\n' "$filename" | rev | cut -d'.' -f 1 | rev)
+# filename=$(printf '%s\n' "$filename" | rev | cut -d'.' -f 2- | rev)
+filesize=$(du -Hh "$1" | cut -f 1)
+geometry=$(identify -format "%G\n" "$1" | head -n1)
+
+# printf '%s\n' "${filename} | ${filetype} | ${geometry} | ${filesize}"
+printf '%s\n' "${filename} | ${geometry} | ${filesize}"

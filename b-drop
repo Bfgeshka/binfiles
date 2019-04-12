@@ -1,0 +1,34 @@
+#!/bin/bash
+
+DRSR=$HOME/1drop/
+IMGS=$HOME/i
+SRTD=$HOME/1sort
+
+
+mkdir -p $SRTD/tor
+mkdir -p $SRTD/iso
+mkdir -p $SRTD/rare/fonts
+
+
+mkdir -p $IMGS/random/jpg $IMGS/random/gif $IMGS/random/png
+find $DRSR -regextype posix-egrep -regex ".*\.(svg|tga|psd|bmp|gifv)$" -exec mv -n -t $IMGS/random {} +
+find $DRSR -regextype posix-egrep -regex ".*\.(jpg|jpeg|jpe)$" -exec mv -n -t $IMGS/random/jpg {} +
+find $DRSR -name "*.gif" -exec mv -n -t $IMGS/random/gif {} +
+find $DRSR -name "*.png" -exec mv -n -t $IMGS/random/png {} +
+
+find $DRSR -regextype posix-egrep -regex ".*\.(deb|run|bin|rpm|sh|py)$" -exec mv -n -t $SRTD/run/linux {} +
+find $DRSR -regextype posix-egrep -regex ".*\.(diff|patch)$" -exec mv -n -t $SRTD/run/linux/patches {} +
+find $DRSR -regextype posix-egrep -regex ".*\.(exe|msi)$" -exec mv -n -t $SRTD/run/win {} +
+find $DRSR -name "*.torrent" -exec mv -n -t $SRTD/tor {} +
+find $DRSR -name "*.apk" -exec mv -n -t $SRTD/run/android {} +
+find $DRSR -name "*.jar" -exec mv -n -t $SRTD/run/java {} +
+find $DRSR -name "*.iso" -exec mv -n -t $SRTD/iso {} +
+find $DRSR -name "*.swf" -exec mv -n -t $SRTD/swf {} +
+find $DRSR -regextype posix-egrep -regex ".*\.(tar|zip|7z|rar|gz|xz|bz2|tgz)$" -exec mv -n -t $SRTD/archive {} +
+find $DRSR -regextype posix-egrep -regex ".*\.(pdf|djvu|txt|doc|docx|fb2|epub|rtf)$" -exec mv -n -t $SRTD/text {} +
+find $DRSR -regextype posix-egrep -regex ".*\.(html|htm|mht|mhtml|chm|maff)$" -exec mv -n -t $SRTD/pages {} +
+find $DRSR -regextype posix-egrep -regex ".*\.(ttf|otf|woff|pcf|bdf)$" -exec mv -n -t $SRTD/rare/fonts {} +
+find $DRSR -regextype posix-egrep -regex ".*\.(flv|mp4|avi|mkv|mov|webm|wmv)$" -exec mv -n -t $HOME/videos {} +
+find $DRSR -regextype posix-egrep -regex ".*\.(mp3|ogg|flac|sid|xm|wma)$" -exec mv -n -t $SRTD/sound {} +
+find $DRSR -regextype posix-egrep -regex ".*\.(c|cpp|ebuild|js|h)$" -exec mv -n -t $SRTD/rare/sources {} +
+exit 0

@@ -1,0 +1,8 @@
+#!/bin/sh
+BG="#000000"
+FG="#ffffff"
+CACHE_PATH=$HOME/.dwm/dmenu_list
+
+dmenu -i -b -p EXEC -nb "$BG" -nf "$FG" -sb "$FG" -sf "$BG" <  $CACHE_PATH | rcsh &
+
+exit 0

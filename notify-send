@@ -1,0 +1,9 @@
+#! /bin/sh
+# for i in $@; do :; done
+# echo "[$(date +%X)] $i" >> /tmp/notif
+
+echo "[$(date +%X)] $@" | fold -w 140 >> /tmp/notif
+# espeak -p 30 -s 120 "$@" 2> /dev/null
+pgrep espeak && killall espeak
+echo "$@" | sed -e 's/\/.* / /g' -e 's/\/.*//g' | espeak -p 30 -s 120 2> /dev/null
+exit 0

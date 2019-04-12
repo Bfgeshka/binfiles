@@ -1,0 +1,20 @@
+#!/bin/sh
+
+FILETYPE=$(file -b --mime-type "$1")
+
+case "$FILETYPE" in
+    video/*)
+    mpv "$1" 2>/dev/null &
+    ;;
+
+    audio/*)
+    deadbeef "$1" &
+    ;;
+
+	image/*)
+	sxiv "$1" &
+	;;
+
+    *)
+    ;;
+esac

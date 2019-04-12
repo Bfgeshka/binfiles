@@ -1,0 +1,3 @@
+#!/bin/bash
+env LANG="ru_RU.UTF-8" env LC_ALL="ru_RU.UTF-8" wine /home/bfg/.wine/drive_c/Program\ Files\ \(x86\)/Irfan\ Viewer/i_view32.exe
+exit 0

@@ -1,0 +1,21 @@
+#! /bin/sh
+
+DEFAULT_EXEC="echo"
+
+MM="$(file --mime-type "$1" | sed -e 's/^.*:\ //g')"
+E=$DEFAULT_EXEC
+
+case $MM in
+	application/x-executable )
+		E=exec ;;
+	text/plain )
+		E=geany ;;
+	image/* )
+		E=~/bin/sxiv_optimised_rifle.sh ;;
+	audio/*|video/* )
+		E="mpv --force-window=yes" ;;
+esac
+
+$E "$1"
+
+exit 0

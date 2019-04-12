@@ -1,0 +1,7 @@
+#! /bin/sh
+
+trash-empty
+b-drop
+notify-send "trash cleaned!"
+
+exit 0
